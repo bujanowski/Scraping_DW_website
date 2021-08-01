@@ -13,7 +13,7 @@ message = Mail(
     """)
 
 # https://www.twilio.com/blog/sending-email-attachments-with-twilio-sendgrid-python
-with open('th-koeln_update.csv', 'rb') as f:
+with open('dw_rus_website.csv', 'rb') as f:
     data = f.read()
     f.close()
 
@@ -21,7 +21,7 @@ encoded_file = base64.b64encode(data).decode()
 
 attachedFile = Attachment(
     FileContent(encoded_file),
-    FileName('th-koeln_update.csv'),
+    FileName('dw_rus_website.csv'),
     FileType('text/csv'),
     Disposition('attachment')
 )
