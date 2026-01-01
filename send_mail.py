@@ -15,7 +15,6 @@ message = Mail(
 # https://www.twilio.com/blog/sending-email-attachments-with-twilio-sendgrid-python
 with open('dw_rus_website.csv', 'rb') as f:
     data = f.read()
-    f.close()
 
 encoded_file = base64.b64encode(data).decode()
 
